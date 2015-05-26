@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Bootstrap -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="static/css/flatly-bootstrap.min.css" rel="stylesheet">
+</head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Votify</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="register">Register</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+    <form id="registerForm">
+        <div class="container">
+            <fieldset>
+                <legend>Registration</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="fname">First Name <abbr title="required">*</abbr></label>
+                            <input class="form-control" type="text" name="fname" id="fname" aria-required="true"
+                                   placeholder="Required" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="lname">Last Name <abbr title="required">*</abbr></label>
+                            <input class="form-control" type="text" name="lname" id="lname" aria-required="true"
+                                   placeholder="Required" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="" for="mailing_streetAddress1">Street Address <abbr
+                            title="Your street address is a required field">*</abbr></label>
+                    <input class="form-control" type="text" name="mailing_streetAddress1" id="mailing_streetAddress1"
+                           aria-required="true" placeholder="Required" required="">
+                </div>
+                <div class="form-group">
+                    <label class="" for="mailing_streetAddress2">Street Address (2)</label>
+                    <input class="form-control" type="text" name="mailing_streetAddress2" id="mailing_streetAddress2">
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            <label for="mailing_city">City <abbr title="Your city is a required field">*</abbr></label>
+                            <input class="form-control" type="text" name="mailing_city" id="mailing_city" aria-required="true"
+                                   placeholder="Required" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="state">State *</label>
+
+
+                            <select name="state" id="state" class="form-control">
+
+                                <option value="null">--</option>
+                                <option value="AK">AK</option>
+                                <option value="AL">AL</option>
+                                <option value="AR">AR</option>
+                                <option value="AZ">AZ</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DC">DC</option>
+                                <option value="DE">DE</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="IA">IA</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="MA">MA</option>
+                                <option value="MD">MD</option>
+                                <option value="ME">ME</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MO">MO</option>
+                                <option value="MS">MS</option>
+                                <option value="MT">MT</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="NE">NE</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NV">NV</option>
+                                <option value="NY" selected="selected">NY</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VA">VA</option>
+                                <option value="VT">VT</option>
+                                <option value="WA">WA</option>
+                                <option value="WI">WI</option>
+                                <option value="WV">WV</option>
+                                <option value="WY">WY</option>
+                            </select>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="mailing_zipCode">Zip Code <abbr title="Your zip code is a required field">*</abbr></label>
+                            <input class="form-control" type="text" name="mailing_zipCode" id="mailing_zipCode" aria-required="true"
+                                   placeholder="Required" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="home_phone_number">Home Phone <abbr title="Your Phone number is a required field">*</abbr></label>
+                    <input type="text" name="home_phone_number" id="home_phone_number" class="form-control" aria-required="true"
+                           placeholder="Required" required="">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email_address">E-mail <abbr title="Your e-mail address is a required field">*</abbr></label>
+                            <input type="text" name="email_address" aria-required="true" id="email" class="form-control"
+                                   placeholder="Required" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="verify_email">Verify E-mail <abbr
+                                    title="Please confirm your e-mail address">*</abbr></label>
+                            <input type="text" name="verify_email" id="verify_email" aria-required="true" class="form-control"
+                                   placeholder="Required" required="">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <input class="btn" type="submit" id="side-search-btn" value="Send">
+            <input type="hidden" value="" name="source">
+        </div>
+
+    </form>
+    <!--javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+
+    </body>
+</html>

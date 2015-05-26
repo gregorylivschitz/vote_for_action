@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Bootstrap -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/navbar-fixed-top.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Votify</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<div class="container">
+        <div class="col-md-6">
+            <div class="page-header">
+                <h4>Welcome Back </h4>
+                <small>Please enter your login details below:</small>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="page-header">
+                <h4>Forgotten Something?</h4>
+                <small>Help! I've locked myself out of my account</small>
+            </div>
+        </div>
+</div>
+<div class="container">
+    <div class="col-md-6">
+        <form id="loginForm" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-md-2 control-label">Username:</label>
+                <div class="col-md-8">
+                    <input class="form-control" placeholder="UserName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Password:</label>
+                <div class="col-md-8">
+                    <input class="form-control" placeholder="Password:" type="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-1">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+            <div id="push"></div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <h4>Lost Username or Password</h4>
+        <p>If you have lost your Username or password, please click the link below and an automatic one will be sent
+        to you</p>
+        <form id="lostAccountForm" role="form">
+            <button type="submit" class="btn btn-primary">Recover Password</button>
+        </form>
+    </div>
+
+</div>
+
+
+<!--javascript-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="static/js/bootstrap.js"></script>
+</body>
+</html>
