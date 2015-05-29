@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/', include('vote_in_action.account_urls')),
     url(r'', include('vote_in_action.urls', namespace="vote_in_action"))
 ]

@@ -20,5 +20,5 @@ from django.contrib import admin
 from vote_in_action import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index')
+    url(r'^$', views.index, name='index'),
 ]

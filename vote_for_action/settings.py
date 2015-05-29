@@ -43,6 +43,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'vote_in_action',
+    'crispy_forms',
+    'registration',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -115,3 +117,22 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#crisp-forms setup
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+
+#Registration app setup
+REGISTRATION_OPEN = True        # If True, users can register
+ACCOUNT_ACTIVATION_DAYS = 7     # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = True  # If True, the user will be automatically logged in.
+LOGIN_REDIRECT_URL = '/index/'  # The page you want users to arrive at after they successful log in
+LOGIN_URL = '/accounts/login/'  # The page users are directed to if they are not logged in,
+
+#Email registration
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'voteforactiondev@gmail.com'
+EMAIL_HOST_PASSWORD = 'man12345'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
