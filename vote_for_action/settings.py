@@ -136,3 +136,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'voteforactiondev@gmail.com'
 EMAIL_HOST_PASSWORD = 'man12345'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+#For django-registration-redux
+REGISTRATION_EMAIL_HTML = False

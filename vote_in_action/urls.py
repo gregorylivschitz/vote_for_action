@@ -18,7 +18,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from vote_in_action import views
+from vote_in_action.forms import ExampleForm
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^example/$', views.vote_example, name='vote_example')
 ]
