@@ -2,7 +2,9 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class = "col-md-6 col-offset-md-3">
-        {% crispy example_form example_form.helper %}
+    <div class="container">
+        <div class = "col-md-6 col-md-offset-3">
+            {% crispy example_form example_form.helper %}
+        </div>
     </div>
 {% endblock content %}
