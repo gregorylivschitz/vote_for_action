@@ -22,3 +22,6 @@ class RegistrationVoteUser(models.Model):
     city = models.CharField(max_length=200)
     state = models.CharField(max_length=200)
     home_phone = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.home_phone

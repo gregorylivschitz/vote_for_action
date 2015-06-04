@@ -15,11 +15,8 @@
       your password and log in.
     </div>
     {% endif %}
-    <form method="post">
-      {% csrf_token %}
-      {{ form|crispy }}
-      <input type="submit" class="btn btn-primary" value="Sign Up">
-    </form>
+        {% csrf_token %}
+        {% crispy form form.helper %}
   </div>
 </div>
 

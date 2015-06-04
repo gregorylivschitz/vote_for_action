@@ -21,7 +21,7 @@ urlpatterns = [
         ActivationView.as_view(),
         name='registration_activate'),
     url(r'^register/$',
-        RegistrationView.as_view(form_class=RegistrationFormUniqueEmail),
+        RegistrationView.as_view(form_class=RegistrationVoteForm),
         name='registration_register'),
     url(r'^register/complete/$',
         TemplateView.as_view(template_name='registration/registration_complete.html'),

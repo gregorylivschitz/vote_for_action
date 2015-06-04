@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, get_user_model
 from django.contrib.auth.models import User
 from crispy_forms.helper import FormHelper
 from django.forms import ModelForm
+from registration.forms import RegistrationFormUniqueEmail
 from vote_in_action.models import RegistrationVoteUser
 
 
@@ -23,15 +24,15 @@ class VoteInActionAuthenticationForm(AuthenticationForm):
                 self.cleaned_data['username'] = users[0].username
         super(VoteInActionAuthenticationForm, self).clean()
 
-class RegistrationVoteForm(ModelForm):
+class RegistrationVoteForm(RegistrationFormUniqueEmail):
 
     def __init__(self, *args, **kwargs):
         super(RegistrationVoteForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_id = 'id-exampleForm'
         self.helper.form_class = 'blueForms form-horizontal'
-        self.helper.label_class = 'col-md-2'
-        self.helper.field_class = 'col-md-8'
+        self.helper.label_class = 'col-lg-2'
+        self.helper.field_class = 'col-lg-8'
         self.helper.form_method = 'post'
         self.helper.form_action = 'submit_survey'
         self.helper.layout = Layout(
@@ -43,7 +44,7 @@ class RegistrationVoteForm(ModelForm):
         self.helper.add_input(Submit('submit', 'Submit'))
     class Meta:
         model = RegistrationVoteUser
-        fields = ("street_address", "street_address2", "city", "state", "home_phone")
+        fields = RegistrationFormUniqueEmail.Meta.fields + ("street_address", "street_address2", "city", "state", "home_phone")
         labels = {
             'street_address': 'What is your address?',
         }
