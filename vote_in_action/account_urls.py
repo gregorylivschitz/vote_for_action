@@ -5,8 +5,9 @@ from django.contrib.auth import views as auth_views
 
 from registration.backends.default.views import ActivationView
 from registration.backends.default.views import RegistrationView
-from registration.forms import RegistrationFormUniqueEmail
+from registration.forms import RegistrationFormUniqueEmail, RegistrationForm
 from vote_in_action.forms import VoteInActionAuthenticationForm, RegistrationVoteForm
+from vote_in_action.views import VoteRegistrationView
 
 
 urlpatterns = [
@@ -21,7 +22,7 @@ urlpatterns = [
         ActivationView.as_view(),
         name='registration_activate'),
     url(r'^register/$',
-        RegistrationView.as_view(form_class=RegistrationVoteForm),
+        VoteRegistrationView.as_view(),
         name='registration_register'),
     url(r'^register/complete/$',
         TemplateView.as_view(template_name='registration/registration_complete.html'),
@@ -33,7 +34,7 @@ urlpatterns = [
     url(r'^logout/$',
         auth_views.logout,
         {'template_name': 'registration/logout.html',
-          'authentication_form': RegistrationVoteForm},
+          'authentication_form': RegistrationForm},
         name='logout'),
     url(r'^password/change/$',
         auth_views.password_change,

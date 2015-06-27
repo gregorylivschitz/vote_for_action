@@ -15,8 +15,11 @@
       your password and log in.
     </div>
     {% endif %}
-        {% csrf_token %}
-        {% crispy form form.helper %}
+  <form method="post">
+    {% csrf_token %}
+    {% crispy form form.helper %}
+    {% crispy form2 form2.helper%}
+  </form>
   </div>
 </div>
 

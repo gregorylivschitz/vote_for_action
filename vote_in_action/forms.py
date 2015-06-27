@@ -24,30 +24,70 @@ class VoteInActionAuthenticationForm(AuthenticationForm):
                 self.cleaned_data['username'] = users[0].username
         super(VoteInActionAuthenticationForm, self).clean()
 
-class RegistrationVoteForm(RegistrationFormUniqueEmail):
+
+class RegistrationVoteForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(RegistrationVoteForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
-        self.helper.form_id = 'id-exampleForm'
-        self.helper.form_class = 'blueForms form-horizontal'
-        self.helper.label_class = 'col-lg-2'
-        self.helper.field_class = 'col-lg-8'
-        self.helper.form_method = 'post'
-        self.helper.form_action = 'submit_survey'
-        self.helper.layout = Layout(
-            'street_address',
-            'street_address2',
-            'city',
-            'state',
-            'home_phone')
+        # self.helper.form_id = 'id-registration-form'
+        # self.helper.form_class = 'blueForms form-horizontal'
+        # self.helper.label_class = 'col-lg-2'
+        # self.helper.field_class = 'col-lg-8'
+        # self.helper.form_method = 'post'
+        # self.helper.form_action = 'submit_survey'
+        # self.helper.layout = Layout(
+        #     'street_address',
+        #     'street_address2',
+        #     'city',
+        #     'state',
+        #     'home_phone')
         self.helper.add_input(Submit('submit', 'Submit'))
+        self.helper.form_tag = False
+
+
     class Meta:
         model = RegistrationVoteUser
-        fields = RegistrationFormUniqueEmail.Meta.fields + ("street_address", "street_address2", "city", "state", "home_phone")
+        fields = ("street_address", "street_address2", "city", "state", "home_phone")
         labels = {
             'street_address': 'What is your address?',
         }
+
+class RegistrationFormUniqueEmailCrispy(RegistrationFormUniqueEmail):
+
+    def __init__(self, *args, **kwargs):
+        super(RegistrationFormUniqueEmailCrispy, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        # self.helper.form_id = 'id-registration-form'
+        # self.helper.form_class = 'blueForms form-horizontal'
+        # self.helper.label_class = 'col-lg-2'
+        # self.helper.field_class = 'col-lg-8'
+        # self.helper.form_method = 'post'
+        # self.helper.form_action = 'submit_survey'
+        # self.helper.layout = Layout(
+        #     'street_address',
+        #     'street_address2',
+        #     'city',
+        #     'state',
+        #     'home_phone')
+        # self.helper.add_input(Submit('submit', 'Submit'))
+        self.helper.form_tag = False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ExampleForm(forms.Form):
     like_website = forms.TypedChoiceField(

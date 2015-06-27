@@ -1,0 +1,294 @@
+[14/Jun/2015 23:49:39] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[14/Jun/2015 23:49:39] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[14/Jun/2015 23:50:10] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[14/Jun/2015 23:50:10] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[14/Jun/2015 23:52:29] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[14/Jun/2015 23:52:29] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[14/Jun/2015 23:53:02] DEBUG [django.db.backends:89] (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[14/Jun/2015 23:53:02] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'demouser' LIMIT 1; args=('demouser',)
+[14/Jun/2015 23:53:02] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$dLznexpMiLMv$RAfyQmWvjChOpqxwkrMbM/p6Mn9knI4GlFX2kYe+8GE=', NULL, false, 'demouser', '', '', 'greg15001@gmail.com', false, true, '2015-06-15T03:53:02.010579+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$dLznexpMiLMv$RAfyQmWvjChOpqxwkrMbM/p6Mn9knI4GlFX2kYe+8GE=', None, False, 'demouser', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 15, 3, 53, 2, 10579, tzinfo=<UTC>))
+[14/Jun/2015 23:53:02] DEBUG [django.db.backends:89] (0.001) INSERT INTO "vote_in_action_registrationvoteuser" ("user_id_id", "street_address", "street_address2", "city", "state", "home_phone") VALUES (19, '32-76 32nd street', '1D', 'New york', 'NY', '6467031402') RETURNING "vote_in_action_registrationvoteuser"."id"; args=(19, '32-76 32nd street', '1D', 'New york', 'NY', '6467031402')
+[14/Jun/2015 23:56:37] DEBUG [django.db.backends:89] (0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[14/Jun/2015 23:56:37] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[15/Jun/2015 09:36:46] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[15/Jun/2015 09:36:46] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'demouser' LIMIT 1; args=('demouser',)
+[15/Jun/2015 09:36:46] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$rSn9toh6nYxi$ouVhnh4027gXJGEKqrbNDcfHJ8as+Kr2fBs5oK50NjM=', NULL, false, 'demouser', '', '', 'greg15001@gmail.com', false, true, '2015-06-15T13:36:46.847886+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$rSn9toh6nYxi$ouVhnh4027gXJGEKqrbNDcfHJ8as+Kr2fBs5oK50NjM=', None, False, 'demouser', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 15, 13, 36, 46, 847886, tzinfo=<UTC>))
+[15/Jun/2015 09:36:46] DEBUG [django.db.backends:89] (0.001) INSERT INTO "vote_in_action_registrationvoteuser" ("user_id_id", "street_address", "street_address2", "city", "state", "home_phone") VALUES (20, '32-76 32nd street', '1D', 'New york', 'NY', '6467031402') RETURNING "vote_in_action_registrationvoteuser"."id"; args=(20, '32-76 32nd street', '1D', 'New york', 'NY', '6467031402')
+[15/Jun/2015 09:40:21] DEBUG [django.db.backends:89] (0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[15/Jun/2015 09:40:21] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[15/Jun/2015 09:40:46] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[15/Jun/2015 09:40:46] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'demouser' LIMIT 1; args=('demouser',)
+[15/Jun/2015 09:40:46] DEBUG [django.db.backends:89] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[15/Jun/2015 09:40:46] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'demouser' LIMIT 1; args=('demouser',)
+[15/Jun/2015 09:40:55] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[15/Jun/2015 09:40:55] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'demouser' LIMIT 1; args=('demouser',)
+[15/Jun/2015 09:40:55] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$Fof5qpQLAcss$kIBh6F84fMAW82yhZknyz289kdB1x9HmKL/OovODRkk=', NULL, false, 'demouser', '', '', 'greg15001@gmail.com', false, true, '2015-06-15T13:40:55.066083+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$Fof5qpQLAcss$kIBh6F84fMAW82yhZknyz289kdB1x9HmKL/OovODRkk=', None, False, 'demouser', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 15, 13, 40, 55, 66083, tzinfo=<UTC>))
+[15/Jun/2015 09:40:55] DEBUG [django.db.backends:89] (0.001) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$20000$Fof5qpQLAcss$kIBh6F84fMAW82yhZknyz289kdB1x9HmKL/OovODRkk=', "last_login" = NULL, "is_superuser" = false, "username" = 'demouser', "first_name" = '', "last_name" = '', "email" = 'greg15001@gmail.com', "is_staff" = false, "is_active" = false, "date_joined" = '2015-06-15T13:40:55.066083+00:00'::timestamptz WHERE "auth_user"."id" = 21; args=('pbkdf2_sha256$20000$Fof5qpQLAcss$kIBh6F84fMAW82yhZknyz289kdB1x9HmKL/OovODRkk=', False, 'demouser', '', '', 'greg15001@gmail.com', False, False, datetime.datetime(2015, 6, 15, 13, 40, 55, 66083, tzinfo=<UTC>), 21)
+[15/Jun/2015 09:40:55] DEBUG [django.db.backends:89] (0.021) INSERT INTO "registration_registrationprofile" ("user_id", "activation_key") VALUES (21, '0a982f8886adacafa3766beadbad75db8eebb8ad') RETURNING "registration_registrationprofile"."id"; args=(21, '0a982f8886adacafa3766beadbad75db8eebb8ad')
+[15/Jun/2015 09:40:58] ERROR [django.request:256] Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\registration\views.py", line 101, in form_valid
+    to, args, kwargs = success_url
+ValueError: too many values to unpack (expected 3)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\registration\views.py", line 91, in dispatch
+    return super(RegistrationView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Greg\dev\vote_for_action\vote_in_action\views.py", line 46, in post
+    super(VoteRegistrationView, self).post(request, *args, **kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\registration\views.py", line 46, in post
+    return self.form_valid(request, form)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\registration\views.py", line 104, in form_valid
+    return redirect(success_url)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\shortcuts.py", line 116, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\shortcuts.py", line 205, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'complete' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.001) SELECT "registration_registrationprofile"."id", "registration_registrationprofile"."user_id", "registration_registrationprofile"."activation_key" FROM "registration_registrationprofile" WHERE "registration_registrationprofile"."activation_key" = '0a982f8886adacafa3766beadbad75db8eebb8ad'; args=('0a982f8886adacafa3766beadbad75db8eebb8ad',)
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 21; args=(21,)
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.000) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$20000$Fof5qpQLAcss$kIBh6F84fMAW82yhZknyz289kdB1x9HmKL/OovODRkk=', "last_login" = NULL, "is_superuser" = false, "username" = 'demouser', "first_name" = '', "last_name" = '', "email" = 'greg15001@gmail.com', "is_staff" = false, "is_active" = true, "date_joined" = '2015-06-15T13:40:55.066083+00:00'::timestamptz WHERE "auth_user"."id" = 21; args=('pbkdf2_sha256$20000$Fof5qpQLAcss$kIBh6F84fMAW82yhZknyz289kdB1x9HmKL/OovODRkk=', False, 'demouser', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 15, 13, 40, 55, 66083, tzinfo=<UTC>), 21)
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.000) UPDATE "registration_registrationprofile" SET "user_id" = 21, "activation_key" = 'ALREADY_ACTIVATED' WHERE "registration_registrationprofile"."id" = 11; args=(21, 'ALREADY_ACTIVATED', 11)
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.012) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'tnmogzwgg2lcwkfy3h8yt58abz5ynbyz' LIMIT 1; args=('tnmogzwgg2lcwkfy3h8yt58abz5ynbyz',)
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.022) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") VALUES ('tnmogzwgg2lcwkfy3h8yt58abz5ynbyz', 'MWM3ZmZiNDY5ODY5NmUyMzg5OGQwMWFkZmQxYTA1OTI4NGU2NTg3ZDp7fQ==', '2015-06-29T13:42:05.055086+00:00'::timestamptz); args=('tnmogzwgg2lcwkfy3h8yt58abz5ynbyz', 'MWM3ZmZiNDY5ODY5NmUyMzg5OGQwMWFkZmQxYTA1OTI4NGU2NTg3ZDp7fQ==', datetime.datetime(2015, 6, 29, 13, 42, 5, 55086, tzinfo=<UTC>))
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'tnmogzwgg2lcwkfy3h8yt58abz5ynbyz'; args=('tnmogzwgg2lcwkfy3h8yt58abz5ynbyz',)
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('tnmogzwgg2lcwkfy3h8yt58abz5ynbyz'); args=('tnmogzwgg2lcwkfy3h8yt58abz5ynbyz',)
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.000) UPDATE "auth_user" SET "last_login" = '2015-06-15T13:42:05.081087+00:00'::timestamptz WHERE "auth_user"."id" = 21; args=(datetime.datetime(2015, 6, 15, 13, 42, 5, 81087, tzinfo=<UTC>), 21)
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.000) UPDATE "django_session" SET "session_data" = 'MGVjMzFiZGY0MzhjODVkMjFiZmMwZjRhMTY2Mzg2NzI2ODZlNTdmNTp7IlJFR0lTVFJBVElPTl9BVVRPX0xPR0lOIjp0cnVlLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyMSIsIl9hdXRoX3VzZXJfaGFzaCI6IjE5YzhmZGUzNjcxMTFmYWU4YjQ2YzAzYjc5YjYwNjIxMTlmZDFkNWYifQ==', "expire_date" = '2015-06-29T13:42:05.082087+00:00'::timestamptz WHERE "django_session"."session_key" = 'tnmogzwgg2lcwkfy3h8yt58abz5ynbyz'; args=('MGVjMzFiZGY0MzhjODVkMjFiZmMwZjRhMTY2Mzg2NzI2ODZlNTdmNTp7IlJFR0lTVFJBVElPTl9BVVRPX0xPR0lOIjp0cnVlLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyMSIsIl9hdXRoX3VzZXJfaGFzaCI6IjE5YzhmZGUzNjcxMTFmYWU4YjQ2YzAzYjc5YjYwNjIxMTlmZDFkNWYifQ==', datetime.datetime(2015, 6, 29, 13, 42, 5, 82087, tzinfo=<UTC>), 'tnmogzwgg2lcwkfy3h8yt58abz5ynbyz')
+[15/Jun/2015 09:42:05] DEBUG [django.db.backends:89] (0.001) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") VALUES ('tnmogzwgg2lcwkfy3h8yt58abz5ynbyz', 'MGVjMzFiZGY0MzhjODVkMjFiZmMwZjRhMTY2Mzg2NzI2ODZlNTdmNTp7IlJFR0lTVFJBVElPTl9BVVRPX0xPR0lOIjp0cnVlLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyMSIsIl9hdXRoX3VzZXJfaGFzaCI6IjE5YzhmZGUzNjcxMTFmYWU4YjQ2YzAzYjc5YjYwNjIxMTlmZDFkNWYifQ==', '2015-06-29T13:42:05.082087+00:00'::timestamptz); args=('tnmogzwgg2lcwkfy3h8yt58abz5ynbyz', 'MGVjMzFiZGY0MzhjODVkMjFiZmMwZjRhMTY2Mzg2NzI2ODZlNTdmNTp7IlJFR0lTVFJBVElPTl9BVVRPX0xPR0lOIjp0cnVlLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyMSIsIl9hdXRoX3VzZXJfaGFzaCI6IjE5YzhmZGUzNjcxMTFmYWU4YjQ2YzAzYjc5YjYwNjIxMTlmZDFkNWYifQ==', datetime.datetime(2015, 6, 29, 13, 42, 5, 82087, tzinfo=<UTC>))
+[15/Jun/2015 09:42:05] WARNING [django.request:170] Not Found: /favicon.ico
+[15/Jun/2015 09:42:05] WARNING [django.request:170] Not Found: /favicon.ico
+[21/Jun/2015 01:54:01] DEBUG [django.db.backends:89] (0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[21/Jun/2015 01:54:01] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[21/Jun/2015 02:30:25] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[21/Jun/2015 02:30:25] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[21/Jun/2015 02:31:14] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 02:31:14] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 02:31:14] DEBUG [django.db.backends:89] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 02:31:14] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 02:31:20] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 02:31:20] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 02:31:20] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$GCr7Z6zCMP2I$E0eQnkRkp7b61ozHAu25VsNl7v8p44AfB/23bmk5D8w=', NULL, false, 'greg15001', '', '', 'greg15001@gmail.com', false, true, '2015-06-21T06:31:20.606512+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$GCr7Z6zCMP2I$E0eQnkRkp7b61ozHAu25VsNl7v8p44AfB/23bmk5D8w=', None, False, 'greg15001', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 21, 6, 31, 20, 606512, tzinfo=<UTC>))
+[21/Jun/2015 02:31:20] DEBUG [django.db.backends:89] (0.000) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$20000$GCr7Z6zCMP2I$E0eQnkRkp7b61ozHAu25VsNl7v8p44AfB/23bmk5D8w=', "last_login" = NULL, "is_superuser" = false, "username" = 'greg15001', "first_name" = '', "last_name" = '', "email" = 'greg15001@gmail.com', "is_staff" = false, "is_active" = false, "date_joined" = '2015-06-21T06:31:20.606512+00:00'::timestamptz WHERE "auth_user"."id" = 22; args=('pbkdf2_sha256$20000$GCr7Z6zCMP2I$E0eQnkRkp7b61ozHAu25VsNl7v8p44AfB/23bmk5D8w=', False, 'greg15001', '', '', 'greg15001@gmail.com', False, False, datetime.datetime(2015, 6, 21, 6, 31, 20, 606512, tzinfo=<UTC>), 22)
+[21/Jun/2015 02:31:20] DEBUG [django.db.backends:89] (0.001) INSERT INTO "registration_registrationprofile" ("user_id", "activation_key") VALUES (22, 'ba7112bd94231f37cf54dff0a1f17eea60131a2b') RETURNING "registration_registrationprofile"."id"; args=(22, 'ba7112bd94231f37cf54dff0a1f17eea60131a2b')
+[21/Jun/2015 02:31:24] ERROR [django.request:256] Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\registration\views.py", line 101, in form_valid
+    to, args, kwargs = success_url
+ValueError: too many values to unpack (expected 3)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\registration\views.py", line 91, in dispatch
+    return super(RegistrationView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\views\generic\base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Greg\dev\vote_for_action\vote_in_action\views.py", line 48, in post
+    super(VoteRegistrationView, self).post(request, *args, **kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\registration\views.py", line 46, in post
+    return self.form_valid(request, form)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\registration\views.py", line 104, in form_valid
+    return redirect(success_url)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\shortcuts.py", line 116, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\shortcuts.py", line 205, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'complete' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+[21/Jun/2015 02:58:50] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[21/Jun/2015 02:58:50] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[21/Jun/2015 02:59:04] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 02:59:04] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 02:59:04] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$hlOeVpBSLzBf$cSsWR7v3YJd3BEo2sThqLS26IhyulUDu3OXkY1tYkzQ=', NULL, false, 'greg15001', '', '', 'greg15001@gmail.com', false, true, '2015-06-21T06:59:04.729694+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$hlOeVpBSLzBf$cSsWR7v3YJd3BEo2sThqLS26IhyulUDu3OXkY1tYkzQ=', None, False, 'greg15001', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 21, 6, 59, 4, 729694, tzinfo=<UTC>))
+[21/Jun/2015 02:59:04] DEBUG [django.db.backends:89] (0.001) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$20000$hlOeVpBSLzBf$cSsWR7v3YJd3BEo2sThqLS26IhyulUDu3OXkY1tYkzQ=', "last_login" = NULL, "is_superuser" = false, "username" = 'greg15001', "first_name" = '', "last_name" = '', "email" = 'greg15001@gmail.com', "is_staff" = false, "is_active" = false, "date_joined" = '2015-06-21T06:59:04.729694+00:00'::timestamptz WHERE "auth_user"."id" = 23; args=('pbkdf2_sha256$20000$hlOeVpBSLzBf$cSsWR7v3YJd3BEo2sThqLS26IhyulUDu3OXkY1tYkzQ=', False, 'greg15001', '', '', 'greg15001@gmail.com', False, False, datetime.datetime(2015, 6, 21, 6, 59, 4, 729694, tzinfo=<UTC>), 23)
+[21/Jun/2015 02:59:04] DEBUG [django.db.backends:89] (0.001) INSERT INTO "registration_registrationprofile" ("user_id", "activation_key") VALUES (23, '2424a36ba04d12ce9f4fc88eb9c545b168343c2e') RETURNING "registration_registrationprofile"."id"; args=(23, '2424a36ba04d12ce9f4fc88eb9c545b168343c2e')
+[21/Jun/2015 02:59:08] DEBUG [django.db.backends:89] (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 02:59:08] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 02:59:33] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 02:59:33] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 02:59:33] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$YZ9ByZdUGg46$SbI9nTMNdG+OXBHiXEB+MbMO1NJlNlDMjkeDmE9wQUw=', NULL, false, 'greg15001', '', '', 'greg15001@gmail.com', false, true, '2015-06-21T06:59:33.782356+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$YZ9ByZdUGg46$SbI9nTMNdG+OXBHiXEB+MbMO1NJlNlDMjkeDmE9wQUw=', None, False, 'greg15001', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 21, 6, 59, 33, 782356, tzinfo=<UTC>))
+[21/Jun/2015 02:59:33] DEBUG [django.db.backends:89] (0.000) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$20000$YZ9ByZdUGg46$SbI9nTMNdG+OXBHiXEB+MbMO1NJlNlDMjkeDmE9wQUw=', "last_login" = NULL, "is_superuser" = false, "username" = 'greg15001', "first_name" = '', "last_name" = '', "email" = 'greg15001@gmail.com', "is_staff" = false, "is_active" = false, "date_joined" = '2015-06-21T06:59:33.782356+00:00'::timestamptz WHERE "auth_user"."id" = 24; args=('pbkdf2_sha256$20000$YZ9ByZdUGg46$SbI9nTMNdG+OXBHiXEB+MbMO1NJlNlDMjkeDmE9wQUw=', False, 'greg15001', '', '', 'greg15001@gmail.com', False, False, datetime.datetime(2015, 6, 21, 6, 59, 33, 782356, tzinfo=<UTC>), 24)
+[21/Jun/2015 02:59:33] DEBUG [django.db.backends:89] (0.001) INSERT INTO "registration_registrationprofile" ("user_id", "activation_key") VALUES (24, '5fb159b07cdabee73318c9aa665fadb261affb27') RETURNING "registration_registrationprofile"."id"; args=(24, '5fb159b07cdabee73318c9aa665fadb261affb27')
+[21/Jun/2015 02:59:35] DEBUG [django.db.backends:89] (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 02:59:35] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 03:00:05] DEBUG [django.db.backends:89] (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 03:00:05] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 03:00:05] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$rexI6FgNt2L4$oVaz0o7zNS79ESaW1TtzuF0DV4iJnMEBNknTLfF/yOo=', NULL, false, 'greg15001', '', '', 'greg15001@gmail.com', false, true, '2015-06-21T07:00:05.469168+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$rexI6FgNt2L4$oVaz0o7zNS79ESaW1TtzuF0DV4iJnMEBNknTLfF/yOo=', None, False, 'greg15001', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 21, 7, 0, 5, 469168, tzinfo=<UTC>))
+[21/Jun/2015 03:00:05] DEBUG [django.db.backends:89] (0.001) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$20000$rexI6FgNt2L4$oVaz0o7zNS79ESaW1TtzuF0DV4iJnMEBNknTLfF/yOo=', "last_login" = NULL, "is_superuser" = false, "username" = 'greg15001', "first_name" = '', "last_name" = '', "email" = 'greg15001@gmail.com', "is_staff" = false, "is_active" = false, "date_joined" = '2015-06-21T07:00:05.469168+00:00'::timestamptz WHERE "auth_user"."id" = 25; args=('pbkdf2_sha256$20000$rexI6FgNt2L4$oVaz0o7zNS79ESaW1TtzuF0DV4iJnMEBNknTLfF/yOo=', False, 'greg15001', '', '', 'greg15001@gmail.com', False, False, datetime.datetime(2015, 6, 21, 7, 0, 5, 469168, tzinfo=<UTC>), 25)
+[21/Jun/2015 03:00:05] DEBUG [django.db.backends:89] (0.001) INSERT INTO "registration_registrationprofile" ("user_id", "activation_key") VALUES (25, 'c7c1f2b28a2617baac734f7f0bf327729485d58e') RETURNING "registration_registrationprofile"."id"; args=(25, 'c7c1f2b28a2617baac734f7f0bf327729485d58e')
+[21/Jun/2015 03:00:07] DEBUG [django.db.backends:89] (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 03:00:07] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 12:00:16] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 12:00:16] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 12:00:16] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$FB6wqx76ATuf$gp3KBMgyyWb9tf39Q4zZMfvP2AvXyAFIOXdhQhICfVU=', NULL, false, 'greg15001', '', '', 'greg15001@gmail.com', false, true, '2015-06-21T16:00:16.163954+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$FB6wqx76ATuf$gp3KBMgyyWb9tf39Q4zZMfvP2AvXyAFIOXdhQhICfVU=', None, False, 'greg15001', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 21, 16, 0, 16, 163954, tzinfo=<UTC>))
+[21/Jun/2015 12:00:16] DEBUG [django.db.backends:89] (0.000) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$20000$FB6wqx76ATuf$gp3KBMgyyWb9tf39Q4zZMfvP2AvXyAFIOXdhQhICfVU=', "last_login" = NULL, "is_superuser" = false, "username" = 'greg15001', "first_name" = '', "last_name" = '', "email" = 'greg15001@gmail.com', "is_staff" = false, "is_active" = false, "date_joined" = '2015-06-21T16:00:16.163954+00:00'::timestamptz WHERE "auth_user"."id" = 26; args=('pbkdf2_sha256$20000$FB6wqx76ATuf$gp3KBMgyyWb9tf39Q4zZMfvP2AvXyAFIOXdhQhICfVU=', False, 'greg15001', '', '', 'greg15001@gmail.com', False, False, datetime.datetime(2015, 6, 21, 16, 0, 16, 163954, tzinfo=<UTC>), 26)
+[21/Jun/2015 12:00:16] DEBUG [django.db.backends:89] (0.001) INSERT INTO "registration_registrationprofile" ("user_id", "activation_key") VALUES (26, 'c774006fea424293958add2bbb4434985dcb3aa5') RETURNING "registration_registrationprofile"."id"; args=(26, 'c774006fea424293958add2bbb4434985dcb3aa5')
+[21/Jun/2015 12:00:19] DEBUG [django.db.backends:89] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 12:00:19] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 12:39:04] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[21/Jun/2015 12:39:04] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[21/Jun/2015 12:39:30] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[21/Jun/2015 12:39:30] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[21/Jun/2015 12:39:30] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$q1Tj3MkOzR1n$DBkMCM4/B4fJCOj8nqCrjUqwRwAp4RfC6O7ZPM2cdPc=', NULL, false, 'greg15001', '', '', 'greg15001@gmail.com', false, true, '2015-06-21T16:39:30.933639+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$q1Tj3MkOzR1n$DBkMCM4/B4fJCOj8nqCrjUqwRwAp4RfC6O7ZPM2cdPc=', None, False, 'greg15001', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 21, 16, 39, 30, 933639, tzinfo=<UTC>))
+[21/Jun/2015 12:39:31] DEBUG [django.db.backends:89] (0.001) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$20000$q1Tj3MkOzR1n$DBkMCM4/B4fJCOj8nqCrjUqwRwAp4RfC6O7ZPM2cdPc=', "last_login" = NULL, "is_superuser" = false, "username" = 'greg15001', "first_name" = '', "last_name" = '', "email" = 'greg15001@gmail.com', "is_staff" = false, "is_active" = false, "date_joined" = '2015-06-21T16:39:30.933639+00:00'::timestamptz WHERE "auth_user"."id" = 27; args=('pbkdf2_sha256$20000$q1Tj3MkOzR1n$DBkMCM4/B4fJCOj8nqCrjUqwRwAp4RfC6O7ZPM2cdPc=', False, 'greg15001', '', '', 'greg15001@gmail.com', False, False, datetime.datetime(2015, 6, 21, 16, 39, 30, 933639, tzinfo=<UTC>), 27)
+[21/Jun/2015 12:39:31] DEBUG [django.db.backends:89] (0.000) INSERT INTO "registration_registrationprofile" ("user_id", "activation_key") VALUES (27, 'a4a8a1544e23e72c20c0a8e3f67074aa54bf0ca3') RETURNING "registration_registrationprofile"."id"; args=(27, 'a4a8a1544e23e72c20c0a8e3f67074aa54bf0ca3')
+[21/Jun/2015 12:39:34] ERROR [django.request:256] Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "C:\Users\Greg\dev\venv_vote\lib\site-packages\django\core\handlers\base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view vote_in_action.views.VoteRegistrationView didn't return an HttpResponse object. It returned None instead.
+[21/Jun/2015 12:41:04] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[21/Jun/2015 12:41:04] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[22/Jun/2015 22:35:05] DEBUG [django.db.backends:89] (0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[22/Jun/2015 22:35:05] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[22/Jun/2015 22:35:32] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[22/Jun/2015 22:35:32] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[22/Jun/2015 22:35:32] DEBUG [django.db.backends:89] (0.001) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$HFNQPuLp5hP2$+dPpUwDAPlxto2SJ/E1H1utxd1ZUDRGxO6PZIWzQrss=', NULL, false, 'greg15001', '', '', 'greg15001@gmail.com', false, true, '2015-06-23T02:35:32.162861+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$HFNQPuLp5hP2$+dPpUwDAPlxto2SJ/E1H1utxd1ZUDRGxO6PZIWzQrss=', None, False, 'greg15001', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 23, 2, 35, 32, 162861, tzinfo=<UTC>))
+[22/Jun/2015 22:35:32] DEBUG [django.db.backends:89] (0.001) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$20000$HFNQPuLp5hP2$+dPpUwDAPlxto2SJ/E1H1utxd1ZUDRGxO6PZIWzQrss=', "last_login" = NULL, "is_superuser" = false, "username" = 'greg15001', "first_name" = '', "last_name" = '', "email" = 'greg15001@gmail.com', "is_staff" = false, "is_active" = false, "date_joined" = '2015-06-23T02:35:32.162861+00:00'::timestamptz WHERE "auth_user"."id" = 28; args=('pbkdf2_sha256$20000$HFNQPuLp5hP2$+dPpUwDAPlxto2SJ/E1H1utxd1ZUDRGxO6PZIWzQrss=', False, 'greg15001', '', '', 'greg15001@gmail.com', False, False, datetime.datetime(2015, 6, 23, 2, 35, 32, 162861, tzinfo=<UTC>), 28)
+[22/Jun/2015 22:35:32] DEBUG [django.db.backends:89] (0.001) INSERT INTO "registration_registrationprofile" ("user_id", "activation_key") VALUES (28, '396b1849eb54f304b6732ecb9f6f0f202242d3c4') RETURNING "registration_registrationprofile"."id"; args=(28, '396b1849eb54f304b6732ecb9f6f0f202242d3c4')
+[22/Jun/2015 22:35:35] DEBUG [django.db.backends:89] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[22/Jun/2015 22:35:35] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[22/Jun/2015 22:38:30] DEBUG [django.db.backends:89] (0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[22/Jun/2015 22:38:30] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[22/Jun/2015 22:39:25] DEBUG [django.db.backends:89] (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[22/Jun/2015 22:39:25] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[22/Jun/2015 22:39:25] DEBUG [django.db.backends:89] (0.000) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$ZgvFZz27daZL$MQoLTSQ47LlWbBs1Np1I4vnIuy9GUj6DmrdbbRJlPMA=', NULL, false, 'greg15001', '', '', 'greg15001@gmail.com', false, true, '2015-06-23T02:39:25.711220+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$ZgvFZz27daZL$MQoLTSQ47LlWbBs1Np1I4vnIuy9GUj6DmrdbbRJlPMA=', None, False, 'greg15001', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 23, 2, 39, 25, 711220, tzinfo=<UTC>))
+[22/Jun/2015 22:39:25] DEBUG [django.db.backends:89] (0.001) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$20000$ZgvFZz27daZL$MQoLTSQ47LlWbBs1Np1I4vnIuy9GUj6DmrdbbRJlPMA=', "last_login" = NULL, "is_superuser" = false, "username" = 'greg15001', "first_name" = '', "last_name" = '', "email" = 'greg15001@gmail.com', "is_staff" = false, "is_active" = false, "date_joined" = '2015-06-23T02:39:25.711220+00:00'::timestamptz WHERE "auth_user"."id" = 29; args=('pbkdf2_sha256$20000$ZgvFZz27daZL$MQoLTSQ47LlWbBs1Np1I4vnIuy9GUj6DmrdbbRJlPMA=', False, 'greg15001', '', '', 'greg15001@gmail.com', False, False, datetime.datetime(2015, 6, 23, 2, 39, 25, 711220, tzinfo=<UTC>), 29)
+[22/Jun/2015 22:39:25] DEBUG [django.db.backends:89] (0.000) INSERT INTO "registration_registrationprofile" ("user_id", "activation_key") VALUES (29, '048b1ac3b5101242046f2472ca9872fdbd41d253') RETURNING "registration_registrationprofile"."id"; args=(29, '048b1ac3b5101242046f2472ca9872fdbd41d253')
+[22/Jun/2015 22:48:37] DEBUG [django.db.backends:89] (0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[22/Jun/2015 22:48:37] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Jun/2015 09:54:31] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[23/Jun/2015 09:54:31] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Jun/2015 09:55:00] DEBUG [django.db.backends:89] (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[23/Jun/2015 09:55:00] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[23/Jun/2015 09:55:00] DEBUG [django.db.backends:89] (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[23/Jun/2015 09:55:00] DEBUG [django.db.backends:89] (0.000) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[23/Jun/2015 09:55:34] DEBUG [django.db.backends:89] (0.002) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[23/Jun/2015 09:55:34] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Jun/2015 09:55:41] DEBUG [django.db.backends:89] (0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE UPPER("auth_user"."email"::text) = UPPER('greg15001@gmail.com'); args=('greg15001@gmail.com',)
+[23/Jun/2015 09:55:41] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = 'greg15001' LIMIT 1; args=('greg15001',)
+[23/Jun/2015 09:55:42] DEBUG [django.db.backends:89] (0.000) INSERT INTO "auth_user" ("password", "last_login", "is_superuser", "username", "first_name", "last_name", "email", "is_staff", "is_active", "date_joined") VALUES ('pbkdf2_sha256$20000$itAHvfsAf1cV$DnVv0GjBk4kNE7IvK4LMeKXqstc2X3oou/ZmaQmAjRA=', NULL, false, 'greg15001', '', '', 'greg15001@gmail.com', false, true, '2015-06-23T13:55:41.955048+00:00'::timestamptz) RETURNING "auth_user"."id"; args=('pbkdf2_sha256$20000$itAHvfsAf1cV$DnVv0GjBk4kNE7IvK4LMeKXqstc2X3oou/ZmaQmAjRA=', None, False, 'greg15001', '', '', 'greg15001@gmail.com', False, True, datetime.datetime(2015, 6, 23, 13, 55, 41, 955048, tzinfo=<UTC>))
+[23/Jun/2015 09:55:42] DEBUG [django.db.backends:89] (0.001) INSERT INTO "vote_in_action_registrationvoteuser" ("user_id_id", "street_address", "street_address2", "city", "state", "home_phone") VALUES (30, '32-76 32nd street', '1D', 'Astoria', 'New York', '6467031402') RETURNING "vote_in_action_registrationvoteuser"."id"; args=(30, '32-76 32nd street', '1D', 'Astoria', 'New York', '6467031402')
+[23/Jun/2015 09:55:42] WARNING [django.request:170] Not Found: /accounts/register/registration_complete
