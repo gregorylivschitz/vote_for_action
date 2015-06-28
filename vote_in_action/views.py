@@ -52,10 +52,7 @@ class VoteRegistrationView(RegistrationView):
             registration_data = form2.save(commit=False)
             registration_data.user_id = userdata
             registration_data.save()
-            return HttpResponseRedirect(self.get_success_url())
+            return self.form_valid(request, form)
         else:
             return self.render_to_response(
                 self.get_context_data(form=form, form2=form2))
-
-    def register(self, request, form):
-        new_user = super(VoteRegistrationView, self).register(self, request, form)
